@@ -1,28 +1,29 @@
 import React from 'react';
+import s from './Profile.module.css';
 
 const Profile = () => {
-    return <div className='content'>
-        <div>
-        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYtfZRhbGQtq2BapB2MXJfWIO2QriO5Wx3qQ&usqp=CAU' />
-        </div>
-        <div>
-        ava +  description
-        </div>
-        <div>
-        my posts
-        <div>
-            New posts
-        </div>
-        <div>
-            <div>
-            post 1
-            </div>
-            <div>
-            post 2q
-            </div>
-        </div>
-        </div>
+    return <div className={s.content}>
+    <div>
+      <img src='https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&h=350' />
     </div>
-};
+    <div>
+      ava + description
+    </div>
+    <div>
+      My posts
+      <div>
+        New post
+      </div>
+      <div className={s.posts}>
+        <div className={s.item}>
+          post 1
+        </div>
+        <div className='item'>
+          post 2
+        </div>
+      </div>
+    </div>
+  </div>
+}
 
 export default Profile;
